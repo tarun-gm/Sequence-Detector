@@ -69,16 +69,10 @@ module mealy_sequence_detector (
                 else next_state = S0;
             end
             S3: begin
-                if (seq_in) begin
-                    next_state = S1;
+                if (seq_in) begin  next_state = S1;
                     detected = 1;  // Sequence 1011 detected
-                end else
-                    next_state = S2;
-            end
-            default: next_state = S0;
-        endcase
-    end
-endmodule
+                end else     next_state = S2;
+            end default: next_state = S0; endcase end endmodule
 OUTPUT:![MEALY-SD](https://github.com/user-attachments/assets/8a3fd4e3-a37b-49f8-8626-f446eac8d14f)
 
 
